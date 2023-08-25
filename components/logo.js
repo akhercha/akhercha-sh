@@ -4,11 +4,13 @@ import {Text, useColorModeValue} from '@chakra-ui/react'
 
 import styled from '@emotion/styled'
 
+
 const LogoBox = styled.span`
     font-weight: bold;
-    font-size: 18px;
-    display: inline-flex;
-    align-items: center;
+    font-size: 20px;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
     height: 30px;
     line-height: 30px;
     padding: 10px;
@@ -31,7 +33,7 @@ const Logo = () => {
                     fontWeight="bold"
                     ml={3}
                 >
-                    Adel Kherchache
+                    akhercha.sh
                 </Text>
             </LogoBox>
         </Link>
