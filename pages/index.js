@@ -3,14 +3,19 @@ import {
     Box,
     Heading,
     Image,
+    List,
     Button,
-    Link,
+    ListItem,
     useColorModeValue
 } from '@chakra-ui/react'
 import Section from '../components/section'
 import Paragraph from '../components/paragraph'
-import { BioSection, BioYear } from '../components/bio'
-import { ChevronRightIcon } from '@chakra-ui/icons'
+import {
+    IoLogoGithub,
+    IoLogoTwitter,
+    IoLogoDiscord,
+    IoLogoLinkedin
+} from 'react-icons/io5'
 const Page = () => {
     return (
         <Container>
@@ -22,7 +27,8 @@ const Page = () => {
                 mt={10}
                 align="left"
             >
-                hello, world! 👋
+                &nbsp; idk <span style={{ opacity: '0.5' }}>how</span> you
+                landed here, but eh, welcome 🫡
             </Box>
 
             <Box display={{ md: 'flex' }}>
@@ -54,45 +60,91 @@ const Page = () => {
 
             <Section delay={0.1}>
                 <Heading as="h3" variant="section-title">
-                    Work
+                    about
                 </Heading>
                 <Paragraph>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit
-                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                    occaecat cupidatat non proident, sunt in culpa qui officia
-                    deserunt mollit anim id est laborum.
+                    curious guy talking to computer since too much time now.
+                    this website showcases the zenith of my creative flair.
+                    <br />
+                    <br />
+                </Paragraph>
+                <Paragraph style={{ fontSize: '13px', textAlign: 'right' }}>
+                    (didn't even made this layout, it's from
+                    <a
+                        style={{
+                            fontStyle: 'italic',
+                            color: 'orange',
+                            opacity: 0.7
+                        }}
+                        href="https://www.youtube.com/watch?v=bSMZgXzC9AA"
+                        target="_blank"
+                    >
+                        {' '}
+                        this amazing tutorial
+                    </a>
+                    )
                 </Paragraph>
                 <Box align="center" my={4}>
-                    <a href="/works">
-                        <Button
-                            rightIcon={<ChevronRightIcon />}
-                            colorScheme="orange"
-                        >
-                            Portfolio
-                        </Button>
-                    </a>
+                    <a href="/works"></a>
                 </Box>
             </Section>
-            <Section delay={0.2}>
+
+            <Section delay={0.3}>
                 <Heading as="h3" variant="section-title">
-                    Bio
+                    say hi
                 </Heading>
-                <BioSection>
-                    <BioYear>1997</BioYear>
-                    Born in Bordeaux, France
-                </BioSection>
-                <BioSection>
-                    <BioYear>2022</BioYear>
-                    Completed Master in Computer Science from 42 Paris
-                </BioSection>
-                <BioSection>
-                    <BioYear>2023 to Present</BioYear>
-                    Works as a Software Engineer at Pacmed
-                </BioSection>
+                <List>
+                    <ListItem>
+                        <a href="https://github.com/akhercha" target="_blank">
+                            <Button
+                                variant="ghost"
+                                colorScheme="orange"
+                                leftIcon={<IoLogoGithub />}
+                            >
+                                akhercha
+                            </Button>
+                        </a>
+                    </ListItem>
+                    <ListItem>
+                        <a
+                            href="https://twitter.com/adailesdepoulet"
+                            target="_blank"
+                        >
+                            <Button
+                                variant="ghost"
+                                colorScheme="orange"
+                                leftIcon={<IoLogoTwitter />}
+                            >
+                                adailesdepoulet
+                            </Button>
+                        </a>
+                    </ListItem>
+                    <ListItem>
+                        <a href="https://discord.com/" target="_blank">
+                            <Button
+                                variant="ghost"
+                                colorScheme="orange"
+                                leftIcon={<IoLogoDiscord />}
+                            >
+                                Aihe#7869
+                            </Button>
+                        </a>
+                    </ListItem>
+                    <ListItem>
+                        <a
+                            href="https://www.linkedin.com/in/adel-kherchache/"
+                            target="_blank"
+                        >
+                            <Button
+                                variant="ghost"
+                                colorScheme="orange"
+                                leftIcon={<IoLogoLinkedin />}
+                            >
+                                adel.kherchache
+                            </Button>
+                        </a>
+                    </ListItem>
+                </List>
             </Section>
         </Container>
     )

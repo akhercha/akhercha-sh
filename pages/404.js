@@ -14,12 +14,12 @@ const NotFound = () => {
         <Container mt={20}>
             <Heading as="h1">😱 Not Found</Heading>
             <br></br>
-            <Text>The page you're looking for does not exist.</Text>
+            <Text>The page you&apos;re looking for does not exist.</Text>
             <Divider my={12} />
 
             <Box my={12} align="center">
                 <NextLink href="/" passHref>
-                    <Button colorScheme="teal">Return to Home</Button>
+                    <Button colorScheme="orange">Return to Home</Button>
                 </NextLink>
             </Box>
         </Container>

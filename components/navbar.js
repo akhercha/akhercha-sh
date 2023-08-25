@@ -1,16 +1,7 @@
 import Logo from './logo'
-import NextLink from 'next/link'
-import {
-    Container,
-    Box,
-    Link,
-    Heading,
-    useColorModeValue
-} from '@chakra-ui/react'
+import { Container, Box, Heading, useColorModeValue } from '@chakra-ui/react'
 
 const Navbar = props => {
-    const { path } = props
-
     return (
         <Box
             position="fixed"
