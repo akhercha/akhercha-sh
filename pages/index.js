@@ -67,14 +67,17 @@ const Page = () => {
                     deserunt mollit anim id est laborum.
                 </Paragraph>
                 <Box align="center" my={4}>
-                    <a href='/works'>
-                        <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">
+                    <a href="/works">
+                        <Button
+                            rightIcon={<ChevronRightIcon />}
+                            colorScheme="orange"
+                        >
                             Portfolio
                         </Button>
                     </a>
                 </Box>
             </Section>
-            <Section delay={.2}>
+            <Section delay={0.2}>
                 <Heading as="h3" variant="section-title">
                     Bio
                 </Heading>

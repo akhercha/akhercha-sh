@@ -11,7 +11,7 @@ import {
 
 const NotFound = () => {
     return (
-        <Container>
+        <Container mt={20}>
             <Heading as="h1">😱 Not Found</Heading>
             <br></br>
             <Text>The page you're looking for does not exist.</Text>
