@@ -10,12 +10,7 @@ import {
 } from '@chakra-ui/react'
 import Section from '../components/section'
 import Paragraph from '../components/paragraph'
-import {
-    IoLogoGithub,
-    IoLogoTwitter,
-    IoLogoDiscord,
-    IoLogoLinkedin
-} from 'react-icons/io5'
+import { IoLogoGithub, IoLogoLinkedin, IoMail } from 'react-icons/io5'
 const Page = () => {
     return (
         <Container>
@@ -23,18 +18,22 @@ const Page = () => {
                 borderRadius="lg"
                 bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
                 p={3}
-                mb={6}
+                mb={8}
                 mt={10}
                 align="left"
             >
-                &nbsp; idk <span style={{ opacity: '0.5' }}>how</span> you
-                landed here, but eh, welcome 🫡
+                &nbsp; idk <span style={{ fontStyle: 'italic' }}>how</span> you
+                landed here, but eh,{' '}
+                <span style={{ fontWeight: 'bold', color: 'orange' }}>
+                    welcome
+                </span>{' '}
+                🫡
             </Box>
 
             <Box display={{ md: 'flex' }}>
                 <Box flexGrow={1}>
                     <Heading as="h2" variant="page-title">
-                        Adel K.
+                        Adel
                     </Heading>
                     <p>Software Engineer</p>
                 </Box>
@@ -58,7 +57,7 @@ const Page = () => {
                 </Box>
             </Box>
 
-            <Section delay={0.1}>
+            <Section delay={0.2}>
                 <Heading as="h3" variant="section-title">
                     about
                 </Heading>
@@ -69,11 +68,10 @@ const Page = () => {
                     <br />
                 </Paragraph>
                 <Paragraph style={{ fontSize: '13px', textAlign: 'right' }}>
-                    (didn't even made this layout, it's from
+                    (didn&apos;t even made this layout, it&apos;s from
                     <a
                         style={{
                             fontStyle: 'italic',
-                            color: 'orange',
                             opacity: 0.7
                         }}
                         href="https://www.youtube.com/watch?v=bSMZgXzC9AA"
@@ -84,12 +82,18 @@ const Page = () => {
                     </a>
                     )
                 </Paragraph>
-                <Box align="center" my={4}>
-                    <a href="/works"></a>
-                </Box>
             </Section>
 
-            <Section delay={0.3}>
+            <Section delay={0.4}>
+                <Heading as="h3" variant="section-title">
+                    interests
+                </Heading>
+                <Paragraph>
+                    music, video games, beers, blockchains, books...
+                </Paragraph>
+            </Section>
+
+            <Section delay={0.6}>
                 <Heading as="h3" variant="section-title">
                     say hi
                 </Heading>
@@ -107,31 +111,6 @@ const Page = () => {
                     </ListItem>
                     <ListItem>
                         <a
-                            href="https://twitter.com/adailesdepoulet"
-                            target="_blank"
-                        >
-                            <Button
-                                variant="ghost"
-                                colorScheme="orange"
-                                leftIcon={<IoLogoTwitter />}
-                            >
-                                adailesdepoulet
-                            </Button>
-                        </a>
-                    </ListItem>
-                    <ListItem>
-                        <a href="https://discord.com/" target="_blank">
-                            <Button
-                                variant="ghost"
-                                colorScheme="orange"
-                                leftIcon={<IoLogoDiscord />}
-                            >
-                                Aihe#7869
-                            </Button>
-                        </a>
-                    </ListItem>
-                    <ListItem>
-                        <a
                             href="https://www.linkedin.com/in/adel-kherchache/"
                             target="_blank"
                         >
@@ -141,6 +120,17 @@ const Page = () => {
                                 leftIcon={<IoLogoLinkedin />}
                             >
                                 adel.kherchache
+                            </Button>
+                        </a>
+                    </ListItem>
+                    <ListItem>
+                        <a href="mailto: akherchache@pm.me" target="_blank">
+                            <Button
+                                variant="ghost"
+                                colorScheme="orange"
+                                leftIcon={<IoMail />}
+                            >
+                                akherchache@pm.me
                             </Button>
                         </a>
                     </ListItem>

@@ -12,7 +12,7 @@ import {
 const NotFound = () => {
     return (
         <Container mt={20}>
-            <Heading as="h1">😱 Not Found</Heading>
+            <Heading as="h1">😱 404: Not Found</Heading>
             <br></br>
             <Text>The page you&apos;re looking for does not exist.</Text>
             <Divider my={12} />
