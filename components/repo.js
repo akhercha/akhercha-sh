@@ -1,7 +1,5 @@
 import { Box, Heading, Link, Icon, Divider, Flex, Tag } from '@chakra-ui/react'
-import { IoLogoGithub, IoTimeSharp, IoCodeSharp } from 'react-icons/io5'
-
-const formatDate = dateString => new Date(dateString).toLocaleDateString()
+import { IoLogoGithub } from 'react-icons/io5'
 
 const Repo = repo => {
     return (
