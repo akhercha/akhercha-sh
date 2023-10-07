@@ -11,9 +11,7 @@ import {
 } from '@chakra-ui/react'
 import Section from '../components/section'
 import Paragraph from '../components/paragraph'
-import getAllRepositories from '../libs/github-requests'
 import { IoLogoGithub, IoLogoLinkedin, IoMail } from 'react-icons/io5'
-import { useState, useEffect } from 'react'
 
 const Page = () => {
     return (
