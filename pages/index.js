@@ -8,29 +8,14 @@ import {
     ListItem,
     Text,
     useColorModeValue,
-    SimpleGrid
 } from '@chakra-ui/react'
 import Section from '../components/section'
 import Paragraph from '../components/paragraph'
 import getAllRepositories from '../libs/github-requests'
-import Repo from '../components/repo'
 import { IoLogoGithub, IoLogoLinkedin, IoMail } from 'react-icons/io5'
 import { useState, useEffect } from 'react'
 
 const Page = () => {
-    const [repos, setRepos] = useState([])
-
-    useEffect(() => {
-        getAllRepositories('akhercha')
-            .then(data => {
-                console.log(data)
-                setRepos(data)
-            })
-            .catch(error =>
-                console.error('Failed to load repositories:', error)
-            )
-    }, [])
-
     return (
         <Container>
             <Box
@@ -145,20 +130,6 @@ const Page = () => {
                         </a>
                     </ListItem>
                 </List>
-            </Section>
-
-            <Section delay={0.8}>
-                <Heading as="h3" variant="section-title" color="white">
-                    latest public things
-                </Heading>
-                <SimpleGrid
-                    mt={6}
-                    columns={{ base: 1, md: 2, lg: 3 }}
-                    spacing={3}
-                >
-                    {repos &&
-                        repos.map(repo => <Repo key={repo.id} {...repo} />)}
-                </SimpleGrid>
             </Section>
         </Container>
     )
